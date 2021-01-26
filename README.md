@@ -18,7 +18,7 @@ Overview
 
 I have provided PKGBUILDs for the following:
 
-*Coming soon...* <!-- FIXME: Add list -->
+* [ecwolf](https://aur.archlinux.org/packages/ecwolf): advanced source port for Wolfenstein 3D engine games
 
 License
 ---
