@@ -1,0 +1,15 @@
+diff --unified --recursive --text ClearUrls-1.20.0.original/manifest.json ClearUrls-1.20.0.patched/manifest.json
+--- ClearUrls-1.20.0.original/manifest.json	2021-03-08 18:47:55.519933738 +0000
++++ ClearUrls-1.20.0.patched/manifest.json	2021-03-08 18:40:28.120342915 +0000
+@@ -6,6 +6,11 @@
+     "description": "__MSG_extension_description__",
+     "homepage_url": "https://gitlab.com/KevinRoebert/ClearUrls",
+     "default_locale": "en",
++    "browser_specific_settings": {
++        "gecko": {
++            "id": "{74145f27-f039-47ce-a470-a662b129930a}"
++        }
++    },
+     "icons": {
+         "16": "img/clearurls_16x16.png",
+         "19": "img/clearurls_19x19.png",
