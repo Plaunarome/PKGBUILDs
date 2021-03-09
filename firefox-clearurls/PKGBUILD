@@ -5,13 +5,13 @@ _name="ClearUrls"
 _uuid="{74145f27-f039-47ce-a470-a662b129930a}"
 pkgname=firefox-clearurls
 pkgver=1.20.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Removes tracking elements from URLs"
 arch=("any")
 url="https://clearurls.xyz"
 license=("LGPL3")
 groups=("firefox-addons")
-makedepends=("libarchive")
+makedepends=("zip")
 source=("https://gitlab.com/KevinRoebert/${_name}/-/archive/${pkgver}/${_name}-${pkgver}.tar.gz"
 	"fix_corrupt_package.patch")
 sha512sums=('a1d1a474ca634d1a8f2977477e7ef498b839563d952e8f2077f7a12bef89ebc36ed57194e98ce56e0cde6a3f990c25961d2272fc5aa711aab51b0361755e6d9d'
@@ -23,7 +23,7 @@ prepare() {
 
 build() {
 	cd "${_name}-${pkgver}"
-	bsdtar -caf "../${_name}.zip" -- \
+	zip "../${_name}.zip" -X --filesync --recurse-paths -- \
 		_locales/* \
 		browser-polyfill.js \
 		clearurls.js \
